@@ -1,5 +1,6 @@
 import 'normalize.css';
 import './style/main.scss';
+import 'particles.js';
 import { handleNavScroll, throttle } from './js/utils';
 
 const nav = document.querySelector('nav');
@@ -10,3 +11,5 @@ window.addEventListener('scroll', () => {
     throttle(handleNavScroll(nav), 250);
   }
 });
+
+window.particlesJS.load('particles', './assets/particles.json');
