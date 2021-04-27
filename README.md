@@ -1,15 +1,16 @@
-# webpack-boilerplate
+# portfolio
 
-Simple webpack 5 configuration for web development with dev server and production build. 
+Portfolio website created for recrutation. 
 
 
 ## Features
 
-- webpack
-- postcss
-- sass
-- babel with core-js
-- eslint with airbnb configuration
+- RWD, mobile first
+- smart navbar
+- throttling for scroll and resize events
+- es6 modules
+- webpack for development
+- sass, babel, eslint
 
 ## Instalation
 

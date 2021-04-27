@@ -1,7 +1,7 @@
 {
-  "name": "webpack-boilerplate",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "Simple webpack configuration for web development",
+  "description": "Portfolio website created for recrutation.",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,8 +9,6 @@
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [
-    "webpack",
-    "webpack configuration"
   ],
   "author": "4betterweb",
   "license": "MIT",
