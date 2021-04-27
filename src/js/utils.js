@@ -46,7 +46,7 @@ let currentHeight = 0;
 
 const setHeight = (elem, offset) => {
   const windowHeight = window.innerHeight;
-  if (Math.abs(currentHeight - windowHeight) > 100) {
+  if (Math.abs(currentHeight - windowHeight) > 40) {
     // eslint-disable-next-line no-param-reassign
     elem.style.height = `${window.innerHeight - offset}px`;
     currentHeight = windowHeight;

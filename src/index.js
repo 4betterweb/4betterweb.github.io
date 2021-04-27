@@ -6,6 +6,7 @@ import { handleNavScroll, throttle, setHeight } from './js/utils';
 const nav = document.querySelector('nav');
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 const loader = document.querySelector('.loader');
+const body = document.getElementsByTagName('body')[0];
 const topView = document.querySelector('#particles');
 
 window.addEventListener('scroll', () => {
@@ -21,6 +22,8 @@ window.addEventListener('load', () => {
 });
 
 setHeight(topView, 48);
-window.addEventListener('resize', throttle(setHeight(topView, 48), 250));
+const resizeObserver = new ResizeObserver(() => {
+  throttle(setHeight(topView, 48), 250);
+});
 
-console.log(topView.style.height);
+resizeObserver.observe(body);
