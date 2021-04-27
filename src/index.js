@@ -13,3 +13,9 @@ window.addEventListener('scroll', () => {
 });
 
 window.particlesJS.load('particles', './assets/particles.json');
+
+const loader = document.querySelector('.loader');
+
+window.addEventListener('load', () => {
+  loader.style.display = 'none';
+});
