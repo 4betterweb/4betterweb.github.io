@@ -26,7 +26,7 @@ const handleNavScroll = (nav) => {
 // initialize a throttleWait variable
 let throttleWait;
 
-const throttle = (callback, time) => {
+const throttle = (callback, el, time) => {
   // if the variable is true, don't run the function
   if (throttleWait) return;
 
@@ -35,7 +35,7 @@ const throttle = (callback, time) => {
 
   // use setTimeout to run the function within the specified time
   setTimeout(() => {
-    callback();
+    callback(el);
 
     // set throttleWait to false once the timer is up to restart the throttle function
     throttleWait = false;

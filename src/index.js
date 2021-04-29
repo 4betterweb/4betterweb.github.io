@@ -11,7 +11,7 @@ const topView = document.querySelector('#particles');
 
 window.addEventListener('scroll', () => {
   if (mediaQuery && !mediaQuery.matches) {
-    throttle(handleNavScroll(nav), 250);
+    throttle(handleNavScroll, nav, 250);
   }
 });
 
