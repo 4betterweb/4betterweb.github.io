@@ -11,7 +11,7 @@ const topView = document.querySelector('#particles');
 
 window.addEventListener('scroll', () => {
   if (mediaQuery && !mediaQuery.matches) {
-    throttle(handleNavScroll(nav), 250);
+    throttle(handleNavScroll, nav, 250);
   }
 });
 
@@ -21,9 +21,9 @@ window.addEventListener('load', () => {
   loader.style.display = 'none';
 });
 
-setHeight(topView, 48);
+setHeight(topView);
 const resizeObserver = new ResizeObserver(() => {
-  throttle(setHeight(topView, 48), 250);
+  throttle(setHeight, topView, 250);
 });
 
 resizeObserver.observe(body);

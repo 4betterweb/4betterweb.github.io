@@ -26,7 +26,7 @@ const handleNavScroll = (nav) => {
 // initialize a throttleWait variable
 let throttleWait;
 
-const throttle = (callback, time) => {
+const throttle = (callback, el, time) => {
   // if the variable is true, don't run the function
   if (throttleWait) return;
 
@@ -35,7 +35,7 @@ const throttle = (callback, time) => {
 
   // use setTimeout to run the function within the specified time
   setTimeout(() => {
-    callback();
+    callback(el);
 
     // set throttleWait to false once the timer is up to restart the throttle function
     throttleWait = false;
@@ -44,11 +44,11 @@ const throttle = (callback, time) => {
 
 let currentHeight = 0;
 
-const setHeight = (elem, offset) => {
+const setHeight = (elem) => {
   const windowHeight = window.innerHeight;
   if (Math.abs(currentHeight - windowHeight) > 40) {
     // eslint-disable-next-line no-param-reassign
-    elem.style.height = `${window.innerHeight - offset}px`;
+    elem.style.height = `${window.innerHeight - 48}px`;
     currentHeight = windowHeight;
   }
 };
